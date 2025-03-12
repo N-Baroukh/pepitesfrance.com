@@ -1,0 +1,231 @@
+/* ========== DESIGN SYSTEM ========== */
+:root {
+    --primary-yellow: #FFEB3B;
+    --primary-blue: #2196F3;
+    --dark-blue: #0D47A1;
+    --light-gray: #F5F5F5;
+    --dark-gray: #212121;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+}
+
+/* ========== STRUCTURE GÉNÉRALE ========== */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    height: 60px;
+    margin-right: 100px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* ========== BANNIÈRE ========== */
+.banner {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem 0;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.marquee {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee span {
+    flex-shrink: 0;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ========== SECTIONS ========== */
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    margin: 2rem 0;
+}
+
+.bloc-yellow, .bloc-blue {
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.bloc-yellow {
+    background: var(--primary-yellow);
+}
+
+.bloc-blue {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.bloc-yellow:hover,
+.bloc-blue:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ========== ÉLÉMENTS INTERNES ========== */
+.flex-container img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.flex-container h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.flex-container p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* ========== BOUTONS ========== */
+button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.jaune {
+    background: var(--primary-yellow);
+    color: var(--dark-gray);
+    border: 2px solid var(--dark-gray); /* Ajout de la bordure noire */
+}
+
+.jaune:hover {
+    background: #FBC02D;
+    transform: translateY(-2px);
+    border-color: var(--dark-gray); /* Maintien de la bordure au survol */
+}
+
+.bleu {
+    background: var(--dark-blue);
+    color: white;
+}
+
+.bleu:hover {
+    background: #1565C0;
+    transform: translateY(-2px);
+}
+
+/* ========== PIED DE PAGE ========== */
+footer {
+    background: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .marquee span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex-container {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}

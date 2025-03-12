@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="images/logo.webp" rel="icon" type="image/webp">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <img alt="logo" class="logo" onclick="window.location.href='index.html'" src="images/logo.webp"
+         style="cursor: pointer;">
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a class="active" href="nos-cours.html">Nos cours</a></li>
+        <li><a href="credit-impot.html">Crédit d'impôt</a></li>
+        <li><a href="donner-un-cours.html">Donner un cours</a></li>
+        <li><a href="about.html">A Propos</a></li>
+    </ul>
+</nav>
+<div style="background: #f4f7fb; padding: 40px 20px; border-radius: 20px; max-width: 800px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <img alt="profpepite" src="images/profpepite.webp"
+             style="max-width: 200px; height: auto; border-radius: 50%; margin: 0 auto 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border: 3px solid white;">
+    </div>
+
+    <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 25px;
+              background: linear-gradient(45deg, #007bff, #00b4ff);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+              animation: gradientShift 3s ease infinite;">
+        On vous trouve des pépites
+    </h1>
+
+    <p style="text-align: center; font-size: 1.1rem; line-height: 1.6; color: #555;
+            max-width: 600px; margin: 0 auto; padding: 20px;
+            background: rgba(255, 255, 255, 0.9); border-radius: 15px;
+            position: relative;">
+        <span style="display: block; margin-bottom: 15px; font-weight: bold; color: #007bff;">Vous cherchez un cours pour votre enfant ?</span>
+        Niveau primaire, collège, lycée ou supérieur<br>
+        En mathématiques, physique, sciences de la vie et de la terre,<br>
+        français, anglais, allemand, espagnol ou philosophie ?<br>
+                   <a href="#contact-form" style="display: inline-block; margin-top: 15px; padding: 10px 20px;
+                  background: #007bff; color: white; border-radius: 30px;
+                  font-weight: bold; transform: translateY(5px);
+                  text-decoration: none; cursor: pointer;">
+            Faites-nous part de vos demandes
+        </a>
+        <br>
+        <span style="display: inline-block; margin-top: 20px; font-size: 0.9em; color: #777;">
+            Nous vous rappelons dans les 48h !
+        </span>
+    </p>
+</div>
+<div  id="contact-form" style="background: #f4f7fb; padding: 40px; border-radius: 20px; max-width: 600px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 20px;">Quel cours recherchez-vous ?</h2>
+
+    <form action="https://formspree.io/f/xeoaqayz" method="POST"
+          style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Email -->
+        <label for="email" style="font-weight: bold; color: #555;">Votre email : <span
+                style="color: red;">*</span></label>
+        <input id="email" name="email" placeholder="exemple@email.com" required
+               style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
+               type="email">
+
+        <!-- Coordonnées -->
+        <label for="name" style="font-weight: bold; color: #555;">Nom : <span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Nom" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+        <label for="prenom" style="font-weight: bold; color: #555;">Prénom : <span style="color: red;">*</span></label>
+        <input id="prenom" name="prenom" placeholder="Prenom" required type="text" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+
+        <!-- Téléphone et Adresse -->
+        <label for="telephone" style="font-weight: bold; color: #555;">Téléphone : <span
+                style="color: red;">*</span></label>
+        <input id="telephone" name="telephone" placeholder="Téléphone" required type="text" pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres" maxlength="10" inputmode="numeric" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; width: 100%; box-sizing: border-box;" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+
+        <label for="adresse" style="font-weight: bold; color: #555;">Adresse : <span
+                style="color: red;">*</span></label>
+        <input id="adresse" name="adresse" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
+               type="text">
+
+        <!-- Niveau d'études -->
+        <label for="niveau" style="font-weight: bold; color: #555;">Niveau : <span style="color: red;">*</span></label>
+        <select id="niveau" name="niveau" required
+                style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; background: white;">
+            <option value="---">---</option>
+            <option value="maternelle">Maternelle</option>
+            <option value="primaire">Primaire</option>
+            <option value="college">Collège</option>
+            <option value="lycee">Lycée</option>
+            <option value="superieur">Supérieur</option>
+        </select>
+
+        <!-- Message -->
+        <label for="message" style="font-weight: bold; color: #555;">Message :</label>
+        <textarea id="message" name="message"
+                  placeholder="Décrivez vos besoins..."
+                  style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; height: 100px;"></textarea>
+
+        <!-- Bouton -->
+        <button style="background: #007bff; color: #fff; padding: 15px; border: none; border-radius: 10px;
+                       font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease;
+                       margin-top: 10px;"
+                type="submit">
+            Envoyer
+        </button>
+    </form>
+</div>
+
+<style>
+    button:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: 2px solid #007bff;
+        border-color: transparent;
+    }
+    @keyframes gradientShift {
+        0% { background-position: 0 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0 50%; }
+    }
+
+    div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem !important;
+        }
+
+        p {
+            padding: 15px !important;
+            font-size: 1rem !important;
+        }
+
+        img {
+            max-width: 150px !important;
+        }
+    }
+</style>
+<footer>
+    <p>© 2023 PEPITES FRANCES</p>
+    <p>pepitesfrance@gmail.com</p>
+</footer>
+</body>
+</html>

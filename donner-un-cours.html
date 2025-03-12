@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Donner un cours</title>
+    <link href="images/logo.webp" rel="icon" type="image/webp">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <img class="logo" alt="logo" src="images/logo.webp" onclick="window.location.href='index.html'" style="cursor: pointer;">
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="nos-cours.html">Nos cours</a></li>
+        <li><a href="credit-impot.html">Crédit d'impôt</a></li>
+        <li><a href="donner-un-cours.html" class="active">Donner un cours</a></li>
+        <li><a href="about.html">A Propos</a></li>
+    </ul>
+
+</nav>
+<div style="background: #f4f7fb; padding: 40px; border-radius: 20px; max-width: 600px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 20px;">Devenir Professeur chez Pépites</h2>
+    <form action="https://getform.io/f/azywqqpb" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 20px;">
+        <label for="name" style="font-weight: bold; color: #555;">Nom : <span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Nom" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+        <label for="prenom" style="font-weight: bold; color: #555;">Prénom : <span style="color: red;">*</span></label>
+        <input id="prenom" name="prenom" placeholder="Prenom" required type="text" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+        <label for="email" style="font-weight: bold; color: #555;">Votre email : <span style="color: red;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Email" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+        <label for="telephone" style="font-weight: bold; color: #555; display: block; margin-bottom: 5px;">Téléphone : <span style="color: red;">*</span></label>
+        <input id="telephone" name="telephone" placeholder="Téléphone" required type="text" pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres" maxlength="10" inputmode="numeric" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; width: 100%; box-sizing: border-box;" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+
+
+        <label for="adresse" style="font-weight: bold; color: #555;">Adresse : <span style="color: red;">*</span></label>
+        <input id="adresse" name="adresse" placeholder="Adresse" required type="text" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+
+        <label for="message" style="font-weight: bold; color: #555;">Message :</label>
+        <textarea id="message" name="message" placeholder="Message" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; height: 100px;"></textarea>
+
+        <div style="margin-bottom: 30px;">
+            <label for="file" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2d3748; font-size: 0.9rem;">
+                Joindre un fichier
+                <span style="font-weight: 400; color: #718096;">(PDF, JPG, PNG - max 5Mo)</span>
+            </label>
+
+            <div style="position: relative;">
+                <label for="file" style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 24px;
+            background: linear-gradient(145deg, #f7fafc, #edf2f7);
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            hover:bg-red-500
+        ">
+                    <svg style="width: 24px; height: 24px; color: #4299e1;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                    </svg>
+                    <span style="font-weight: 500; color: #2d3748;">Choisir un fichier</span>
+                    <input
+                            type="file"
+                            id="file"
+                            name="file"
+                            style="
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                "
+                            onchange="document.getElementById('file-name').textContent = this.files[0].name"
+                    >
+                </label>
+            </div>
+
+            <div id="file-name" style="
+        margin-top: 8px;
+        font-size: 0.875rem;
+        color: #4a5568;
+        font-style: italic;
+    "></div>
+        </div>
+
+        <input type="hidden" name="_gotcha" style="display:none !important">
+
+        <button type="submit" style="background: #007bff; color: #fff; padding: 15px; border: none; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Envoyer</button>
+    </form>
+</div>
+<footer>
+    <p>© 2023 PEPITES FRANCES</p>
+</footer>
+</body>
+</html>
