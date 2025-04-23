@@ -114,12 +114,56 @@
     background: #2980b9;
 }
 
+/* Media Query pour écrans mobiles (inférieurs à 768px) */
 @media (max-width: 768px) {
-    .options-container {
-        flex-direction: column;
+    .promo-container {
+        padding: 10px; /* Réduire le padding pour optimiser l'espace */
+    }
+
+    .promo-card, .process-card {
+        padding: 1.5rem; /* Réduire le padding interne */
+        margin: 1rem 0; /* Réduire la marge verticale */
+    }
+
+    .gradient-header {
+        font-size: 1.8em; /* Réduire la taille de la police */
+    }
+
+    .highlight-box {
+        padding: 1rem; /* Réduire le padding */
+        font-size: 1em; /* Ajuster la taille de la police */
+    }
+
+    .process-title {
+        font-size: 1.6em; /* Réduire la taille de la police */
+        margin-bottom: 1.5rem; /* Ajuster la marge */
     }
 
     .timeline {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Une seule colonne pour empiler les éléments */
+    }
+
+    .options-container {
+        flex-direction: column; /* Empiler les options verticalement */
+        gap: 1rem; /* Réduire l'espacement entre les options */
+    }
+
+    .option {
+        padding: 1.5rem; /* Réduire le padding */
+    }
+
+    .cta-box {
+        padding: 1.5rem; /* Réduire le padding */
+    }
+
+    .info-link {
+        padding: 10px 20px; /* Réduire le padding du bouton */
+        font-size: 0.9em; /* Ajuster la taille de la police */
+    }
+
+    /* Désactiver les effets hover sur mobile */
+    .promo-card:hover, .process-card:hover, .info-link:hover {
+        transform: none; /* Supprimer l'effet de translation */
+        background: inherit; /* Conserver la couleur de fond d'origine */
     }
 }

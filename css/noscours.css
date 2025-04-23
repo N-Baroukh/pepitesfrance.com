@@ -1,24 +1,30 @@
+/* Effet hover pour les boutons */
 button:hover {
     background: #0056b3;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Styles de focus pour les inputs, selects et textareas */
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #007bff;
     border-color: transparent;
 }
+
+/* Animation de gradient */
 @keyframes gradientShift {
     0% { background-position: 0 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0 50%; }
 }
 
+/* Effet hover pour les sections */
 div.section:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Media Query pour écrans inférieurs à 768px */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem !important;
@@ -32,14 +38,34 @@ div.section:hover {
     img {
         max-width: 150px !important;
     }
+
+    /* Désactiver les effets hover pour les boutons et sections sur mobile */
+    button:hover, div.section:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Simplifier l'animation de gradient pour mobile */
+    @keyframes gradientShift {
+        0% { background-position: 0 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    /* Ajuster le popup pour mobile */
+    .popup {
+        width: 90vw; /* Largeur relative pour s'adapter à l'écran */
+        right: 5vw; /* Centrer légèrement */
+        bottom: 20px; /* Réduire la distance du bas */
+        padding: 10px 15px; /* Réduire le padding */
+    }
 }
 
-
+/* Style pour le bouton flottant ouvert */
 .floating-button.open {
     transform: none !important;
 }
 
-/* Popup */
+/* Style pour le popup */
 .popup {
     position: absolute;
     bottom: 110px;
@@ -48,7 +74,7 @@ div.section:hover {
     border: 1px solid #ccc;
     border-radius: 15px;
     padding: 15px 20px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
     width: 280px;
     display: none;
     animation: fadeIn 0.3s ease;

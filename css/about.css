@@ -13,7 +13,7 @@
 
 .hero-section {
     position: relative;
-    min-height: 60vh; /* Responsive height */
+    min-height: 60vh; /* Hauteur responsive */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
+    background: rgba(0, 0, 0, 0.4); /* Overlay sombre pour le contraste */
     z-index: 2;
 }
 
@@ -50,15 +50,8 @@
     color: white;
     max-width: 800px;
     padding: 20px;
-    font-size: 1.5em; /* Increased font size for better visibility */
+    font-size: 1.5em;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .hero-text {
-        font-size: 1.2em; /* Adjust font size for smaller screens */
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
 }
 
 .team-section {
@@ -150,13 +143,6 @@
     font-size: 1.5em;
 }
 
-@media (max-width: 768px) {
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -164,4 +150,55 @@
 
 .hero-section, .team-section, .services-section {
     animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Media Query pour écrans inférieurs à 768px */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.2em; /* Réduction de la taille de police */
+        padding: 10px; /* Réduction du padding */
+    }
+
+    .team-section {
+        padding: 2rem 1rem; /* Réduction du padding */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .team-card {
+        padding: 1.5rem; /* Réduction du padding */
+    }
+
+    .team-card:hover {
+        transform: none; /* Désactivation de l’effet de survol */
+    }
+
+    .services-section {
+        padding: 1rem; /* Réduction du padding */
+    }
+
+    .service-card h4 {
+        font-size: 1.2em; /* Réduction de la taille des titres */
+    }
+
+    .service-card:hover {
+        transform: none; /* Désactivation de l’effet de survol */
+    }
+}
+
+/* Media Query pour écrans inférieurs à 480px */
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1em; /* Réduction supplémentaire de la taille de police */
+    }
+
+    .section-title {
+        font-size: 2em; /* Ajustement de la taille des titres de section */
+    }
+
+    .service-image {
+        height: 200px; /* Réduction de la hauteur des images */
+    }
 }
