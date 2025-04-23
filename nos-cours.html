@@ -6,6 +6,8 @@
     <title>Nos Cours</title>
     <link href="images/logo.webp" rel="icon" type="image/webp">
     <link href="styles.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+    <link href="noscours.css" rel="stylesheet">
 </head>
 <body style="background-color: #FDD835;">
 <nav>
@@ -111,141 +113,6 @@
         </button>
     </form>
 </div>
-
-<style>
-    button:hover {
-        background: #0056b3;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    input:focus, select:focus, textarea:focus {
-        outline: 2px solid #007bff;
-        border-color: transparent;
-    }
-    @keyframes gradientShift {
-        0% { background-position: 0 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0 50%; }
-    }
-
-div.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 2rem !important;
-        }
-
-        p {
-            padding: 15px !important;
-            font-size: 1rem !important;
-        }
-
-        img {
-            max-width: 150px !important;
-        }
-    }
-    .floating-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 70px;
-        height: 70px;
-        background-color: #FFD700;
-        border: 3px solid black;
-        border-radius: 50%;
-        cursor: pointer;
-        box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease;
-        z-index: 1000;
-    }
-
-
-
-    /* Popup */
-    .popup {
-        position: absolute;
-        bottom: 110px;
-        right: 10px;
-        background: white;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        padding: 15px 20px;
-        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-        width: 280px;
-        display: none;
-        animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .popup::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        right: 30px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: white transparent transparent transparent;
-    }
-    .floating-button.open {
-        transform: none !important;
-    }
-    .popup p {
-        margin: 15px 0;
-        font-size: 15px;
-        line-height: 1.4;
-    }
-
-    .status-circle {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-right: 8px;
-        vertical-align: middle;
-    }
-    .open { background-color: green; }
-    .closed { background-color: red; }
-
-    a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .option-block {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .option-block i {
-        font-size: 20px;
-        margin-top: 4px;
-    }
-
-    small {
-        display: block;
-        margin-top: 2px;
-        font-size: 12px;
-        color: #666;
-    }
-</style>
-
 <!-- Bouton + popup -->
 <div style="position: fixed; bottom: 20px; right: 20px;">
     <button class="floating-button" onclick="togglePopup()">🎯</button>
@@ -270,37 +137,7 @@ div.section:hover {
     </div>
 </div>
 
-<script>
-function togglePopup() {
-    const button = document.querySelector('.floating-button');
-    const popup = document.getElementById('popupOptions');
-    button.classList.toggle('open');
-    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-}
-
-    function isOpenNow() {
-        const now = new Date();
-        const day = now.getDay(); // 0 = dimanche, 1 = lundi...
-        const hour = now.getHours();
-        const minutes = now.getMinutes();
-        const time = hour + minutes / 60;
-
-        // Ouvert lundi à vendredi 09h-19h, fermé samedi-dimanche
-        const openDays = [1, 2, 3, 4, 5]; // lun à ven
-        return openDays.includes(day) && time >= 9 && time < 19;
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const circle = document.getElementById('statusCircle');
-        if (isOpenNow()) {
-            circle.classList.add('open');
-            circle.title = "Nous sommes ouverts";
-        } else {
-            circle.classList.add('closed');
-            circle.title = "Nous sommes fermés";
-        }
-    });
-</script>
+<script src="popup.js"></script>
 <footer>
     <p>© 2023 PÉPITES FRANCE</p>
     <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>

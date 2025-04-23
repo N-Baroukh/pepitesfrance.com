@@ -6,10 +6,13 @@
     <title>A propos</title>
     <link href="images/logo.webp" rel="icon" type="image/webp">
     <link href="styles.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
 </head>
 <body>
 <nav>
-    <img class="logo" alt="logo" src="images/logo.webp" onclick="window.location.href='index.html'" style="cursor: pointer;">
+    <img class="logo" alt="logo" src="images/logo.webp" onclick="window.location.href='index.html'"
+         style="cursor: pointer;">
     <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="nos-cours.html">Nos cours</a></li>
@@ -20,8 +23,11 @@
 </nav>
 <div class="about-container">
     <section class="hero-section">
-        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
-        <p class="hero-text">Pépites France est une entreprise de cours particuliers à domicile. Nous vous proposons des cours de soutien scolaire dans toutes les matières et pour tous les niveaux. Notre mission est de vous aider à trouver l'intervenant idéal pour vous ou votre enfant.</p>
+        <div class="hero-image"
+             style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+        <p class="hero-text">Pépites France est une entreprise de cours particuliers à domicile. Nous vous proposons des
+            cours de soutien scolaire dans toutes les matières et pour tous les niveaux. Notre mission est de vous aider
+            à trouver l'intervenant idéal pour vous ou votre enfant.</p>
     </section>
     <section class="team-section">
         <div class="section-header">
@@ -31,15 +37,18 @@
         <div class="team-grid">
             <div class="team-card">
                 <div class="icon-wrapper">🎯</div>
-                <p class="team-text">Chaque élève est unique et apprend différemment. Nous trouvons l'intervenant adapté à chaque profil.</p>
+                <p class="team-text">Chaque élève est unique et apprend différemment. Nous trouvons l'intervenant adapté
+                    à chaque profil.</p>
             </div>
             <div class="team-card">
                 <div class="icon-wrapper">📚</div>
-                <p class="team-text">Sélection rigoureuse des intervenants selon leur expertise et leurs méthodes pédagogiques.</p>
+                <p class="team-text">Sélection rigoureuse des intervenants selon leur expertise et leurs méthodes
+                    pédagogiques.</p>
             </div>
             <div class="team-card">
                 <div class="icon-wrapper">💼</div>
-                <p class="team-text">Accompagnement personnalisé pour les démarches administratives et les crédits d'impôt.</p>
+                <p class="team-text">Accompagnement personnalisé pour les démarches administratives et les crédits
+                    d'impôt.</p>
             </div>
         </div>
     </section>
@@ -47,288 +56,26 @@
     <section class="services-section">
 
         <div class="service-card">
-            <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="service-image"
+                 style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"></div>
             <h4>Cours ponctuels</h4>
         </div>
         <!-- Suivi régulier - Image de tutorat personnalisé -->
         <div class="service-card">
-            <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3Jpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=80')"></div>
+            <div class="service-image"
+                 style="background-image: url('https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3Jpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=80')"></div>
             <h4>Suivi régulier</h4>
         </div>
 
         <!-- Aide aux devoirs - Image parent/enfant studieux -->
         <div class="service-card">
-            <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')"></div>
+            <div class="service-image"
+                 style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')"></div>
             <h4>Aide aux devoirs</h4>
         </div>
     </section>
 </div>
 
-<style>
-    :root {
-        --primary-color: #2c3e50;
-        --secondary-color: #3498db;
-        --accent-color: #e67e22;
-    }
-
-    .about-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        font-family: 'Segoe UI', sans-serif;
-        line-height: 1.6;
-    }
-
-    .hero-section {
-        position: relative;
-        min-height: 60vh; /* Responsive height */
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        z-index: 1;
-    }
-
-    .hero-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
-        z-index: 2;
-    }
-
-    .hero-text {
-        position: relative;
-        z-index: 3;
-        color: white;
-        max-width: 800px;
-        padding: 20px;
-        font-size: 1.5em; /* Increased font size for better visibility */
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        .hero-text {
-            font-size: 1.2em; /* Adjust font size for smaller screens */
-            padding: 10px; /* Reduce padding on smaller screens */
-        }
-    }
-
-    .team-section {
-        padding: 4rem 2rem;
-        background: #f8f9fa;
-        margin: 3rem 0;
-        border-radius: 15px;
-    }
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    .section-title {
-        font-size: 2.5em;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-
-    .underline {
-        width: 100px;
-        height: 3px;
-        background: var(--accent-color);
-        margin: 0 auto;
-    }
-
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .team-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        text-align: center;
-        transition: transform 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .team-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .icon-wrapper {
-        font-size: 2.5em;
-        margin-bottom: 1rem;
-        color: var(--secondary-color);
-    }
-
-    .services-section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-    .service-card {
-        position: relative;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-        transform: scale(1.03);
-    }
-
-    .service-image {
-        height: 250px;
-        background-size: cover;
-        background-position: center;
-        filter: grayscale(20%);
-    }
-
-    .service-card h4 {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 1.5rem;
-        background: linear-gradient(transparent, rgba(0,0,0,0.7));
-        color: white;
-        margin: 0;
-        text-align: center;
-        font-size: 1.5em;
-    }
-
-    @media (max-width: 768px) {
-
-        .team-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-section, .team-section, .services-section {
-        animation: fadeIn 0.8s ease-out forwards;
-    }
-</style>
-<style>
-    .floating-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 70px;
-        height: 70px;
-        background-color: #FFD700;
-        border: 3px solid black;
-        border-radius: 50%;
-        cursor: pointer;
-        box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease;
-        z-index: 1000;
-    }
-
-
-
-    /* Popup */
-    .popup {
-        position: absolute;
-        bottom: 90px;
-        right: 10px;
-        background: white;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        padding: 15px 20px;
-        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-        width: 280px;
-        display: none;
-        animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .popup::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        right: 30px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: white transparent transparent transparent;
-    }
-
-    .popup p {
-        margin: 15px 0;
-        font-size: 15px;
-        line-height: 1.4;
-    }
-
-    .status-circle {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-right: 8px;
-        vertical-align: middle;
-    }
-    .open { background-color: green; }
-    .closed { background-color: red; }
-
-    a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .option-block {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .option-block i {
-        font-size: 20px;
-        margin-top: 4px;
-    }
-
-    small {
-        display: block;
-        margin-top: 2px;
-        font-size: 12px;
-        color: #666;
-    }
-</style>
 
 <!-- Bouton + popup -->
 <div style="position: fixed; bottom: 20px; right: 20px;">
@@ -354,36 +101,7 @@
     </div>
 </div>
 
-<script>
-    function togglePopup() {
-        document.querySelector('.floating-button').classList.toggle('open');
-        const popup = document.getElementById('popupOptions');
-        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function isOpenNow() {
-        const now = new Date();
-        const day = now.getDay(); // 0 = dimanche, 1 = lundi...
-        const hour = now.getHours();
-        const minutes = now.getMinutes();
-        const time = hour + minutes / 60;
-
-        // Ouvert lundi à vendredi 09h-19h, fermé samedi-dimanche
-        const openDays = [1, 2, 3, 4, 5]; // lun à ven
-        return openDays.includes(day) && time >= 9 && time < 19;
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const circle = document.getElementById('statusCircle');
-        if (isOpenNow()) {
-            circle.classList.add('open');
-            circle.title = "Nous sommes ouverts";
-        } else {
-            circle.classList.add('closed');
-            circle.title = "Nous sommes fermés";
-        }
-    });
-</script>
+<script src="popup.js"></script>
 <footer>
     <p>© 2023 PÉPITES FRANCE</p>
     <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>

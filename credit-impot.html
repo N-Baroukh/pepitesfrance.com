@@ -6,10 +6,13 @@
     <title>Credit Impôt</title>
     <link href="images/logo.webp" rel="icon" type="image/webp">
     <link href="styles.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+    <link href="creditimpot.css" rel="stylesheet">
 </head>
 <body>
 <nav>
-    <img class="logo" alt="logo" src="images/logo.webp" onclick="window.location.href='index.html'" style="cursor: pointer;">
+    <img class="logo" alt="logo" src="images/logo.webp" onclick="window.location.href='index.html'"
+         style="cursor: pointer;">
     <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="nos-cours.html">Nos cours</a></li>
@@ -22,7 +25,8 @@
     <div class="promo-card">
         <h3 class="gradient-header">🎓 PAYEZ UNIQUEMENT 50% DE VOS COURS PARTICULIERS !</h3>
         <div class="ribbon"></div>
-        <p class="highlight-box">Pépites France vous permet de bénéficier immédiatement de <span class="highlight">50% de crédit d’impôt</span> sur vos cours particuliers à domicile grâce à l'Urssaf et la Direction générale des Finances publiques.</p>
+        <p class="highlight-box">Pépites France vous permet de bénéficier immédiatement de <span class="highlight">50% de crédit d’impôt</span>
+            sur vos cours particuliers à domicile grâce à l'Urssaf et la Direction générale des Finances publiques.</p>
     </div>
 
     <div class="process-card">
@@ -81,233 +85,6 @@
     </div>
 </div>
 
-
-<style>
-    .promo-container {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 20px;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    .promo-card, .process-card {
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        padding: 2rem;
-        margin: 2rem 0;
-        position: relative;
-        transition: transform 0.3s ease;
-    }
-
-    .promo-card:hover, .process-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .gradient-header {
-        background: linear-gradient(45deg, #2c3e50, #3498db);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 2.2em;
-        margin-bottom: 1.5rem;
-    }
-
-    .highlight-box {
-        background: #f8f9fa;
-        border-left: 4px solid #3498db;
-        padding: 1.5rem;
-        font-size: 1.1em;
-        line-height: 1.6;
-    }
-
-    .highlight {
-        color: #27ae60;
-        font-weight: 700;
-    }
-
-    .process-title {
-        color: #2c3e50;
-        font-size: 2em;
-        border-bottom: 3px solid #e67e22;
-        padding-bottom: 0.5em;
-        margin-bottom: 2rem;
-    }
-
-    .timeline {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
-    }
-
-    .step {
-        text-align: center;
-        padding: 1.5rem;
-        border-radius: 10px;
-        background: #f8f9fa;
-    }
-
-    .step-icon {
-        font-size: 2em;
-        color: #3498db;
-        margin-bottom: 1rem;
-    }
-
-    .options-container {
-        display: flex;
-        gap: 2rem;
-        margin: 3rem 0;
-    }
-
-    .option {
-        flex: 1;
-        padding: 2rem;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
-
-    .option1 {
-        background: #e8f5e9;
-        border: 2px solid #2ecc71;
-    }
-
-    .option2 {
-        background: #fff3e0;
-        border: 2px solid #f1c40f;
-    }
-
-    .cta-box {
-        text-align: center;
-        padding: 2rem;
-        background: #f8f9fa;
-        border-radius: 12px;
-        margin-top: 2rem;
-    }
-
-    .info-link {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 12px 25px;
-        background: #3498db;
-        color: white !important;
-        text-decoration: none;
-        border-radius: 25px;
-        transition: background 0.3s ease;
-    }
-
-    .info-link:hover {
-        background: #2980b9;
-    }
-
-    @media (max-width: 768px) {
-        .options-container {
-            flex-direction: column;
-        }
-
-        .timeline {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-<!-- -->
-<style>
-    .floating-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 70px;
-        height: 70px;
-        background-color: #FFD700;
-        border: 3px solid black;
-        border-radius: 50%;
-        cursor: pointer;
-        box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease;
-        z-index: 1000;
-    }
-
-
-
-    /* Popup */
-    .popup {
-        position: absolute;
-        bottom: 90px;
-        right: 10px;
-        background: white;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        padding: 15px 20px;
-        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-        width: 280px;
-        display: none;
-        animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .popup::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        right: 30px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: white transparent transparent transparent;
-    }
-
-    .popup p {
-        margin: 15px 0;
-        font-size: 15px;
-        line-height: 1.4;
-    }
-
-    .status-circle {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-right: 8px;
-        vertical-align: middle;
-    }
-
-    .open { background-color: green; }
-    .closed { background-color: red; }
-
-    a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .option-block {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .option-block i {
-        font-size: 20px;
-        margin-top: 4px;
-    }
-
-    small {
-        display: block;
-        margin-top: 2px;
-        font-size: 12px;
-        color: #666;
-    }
-</style>
-
 <!-- Bouton + popup -->
 <div style="position: fixed; bottom: 20px; right: 20px;">
     <button class="floating-button" onclick="togglePopup()">🎯</button>
@@ -332,36 +109,7 @@
     </div>
 </div>
 
-<script>
-    function togglePopup() {
-        document.querySelector('.floating-button').classList.toggle('open');
-        const popup = document.getElementById('popupOptions');
-        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function isOpenNow() {
-        const now = new Date();
-        const day = now.getDay(); // 0 = dimanche, 1 = lundi...
-        const hour = now.getHours();
-        const minutes = now.getMinutes();
-        const time = hour + minutes / 60;
-
-        // Ouvert lundi à vendredi 09h-19h, fermé samedi-dimanche
-        const openDays = [1, 2, 3, 4, 5]; // lun à ven
-        return openDays.includes(day) && time >= 9 && time < 19;
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const circle = document.getElementById('statusCircle');
-        if (isOpenNow()) {
-            circle.classList.add('open');
-            circle.title = "Nous sommes ouverts";
-        } else {
-            circle.classList.add('closed');
-            circle.title = "Nous sommes fermés";
-        }
-    });
-</script>
+<script src="popup.js"></script>
 <footer>
     <p>© 2023 PÉPITES FRANCE</p>
     <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>

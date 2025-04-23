@@ -1,0 +1,125 @@
+.promo-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.promo-card, .process-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.promo-card:hover, .process-card:hover {
+    transform: translateY(-5px);
+}
+
+.gradient-header {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 1.5rem;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.process-title {
+    color: #2c3e50;
+    font-size: 2em;
+    border-bottom: 3px solid #e67e22;
+    padding-bottom: 0.5em;
+    margin-bottom: 2rem;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.step {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.step-icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.options-container {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.option {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.option1 {
+    background: #e8f5e9;
+    border: 2px solid #2ecc71;
+}
+
+.option2 {
+    background: #fff3e0;
+    border: 2px solid #f1c40f;
+}
+
+.cta-box {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.info-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 25px;
+    background: #3498db;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.info-link:hover {
+    background: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+}
