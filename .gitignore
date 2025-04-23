@@ -1,0 +1,25 @@
+# Dossier JetBrains (WebStorm, PhpStorm...)
+.idea/
+
+# Fichiers système macOS
+.DS_Store
+
+# Thumbs.db Windows
+Thumbs.db
+
+# Dossiers temporaires
+node_modules/
+dist/
+build/
+
+# Fichiers de log
+*.log
+
+# Vscode settings
+.vscode/
+
+# Fichiers de sauvegarde ou temporaires
+*.tmp
+*.swp
+*.bak
+*~

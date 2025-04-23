@@ -72,7 +72,7 @@ nav {
 
 /* ========== BANNIÈRE ========== */
 .banner {
-    background: var(--primary-blue);
+   background: var(--dark-blue);
     color: white;
     padding: 1rem 0;
     overflow: hidden;
@@ -117,7 +117,7 @@ nav {
 }
 
 .bloc-yellow {
-    background: var(--primary-yellow);
+   background: #FDD835;
 }
 
 .bloc-blue {
@@ -185,12 +185,16 @@ button {
 
 /* ========== PIED DE PAGE ========== */
 footer {
-    background: var(--dark-blue);
+    background: #1565C0; /* Couleur légèrement moins foncée */
     color: white;
     text-align: center;
     padding: 2rem;
     margin-top: auto;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-evenly; /* Ajuste l'espacement entre les éléments */
+    align-items: center; /* Aligne les éléments verticalement */
+    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne */
 }
 
 /* ========== RESPONSIVE ========== */

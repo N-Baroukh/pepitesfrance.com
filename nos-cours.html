@@ -6,7 +6,7 @@
     <link href="images/logo.webp" rel="icon" type="image/webp">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #FDD835;">
 <nav>
     <img alt="logo" class="logo" onclick="window.location.href='index.html'" src="images/logo.webp"
          style="cursor: pointer;">
@@ -148,9 +148,161 @@
         }
     }
 </style>
+<style>
+    .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        background-color: #FFD700;
+        border: 3px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+        z-index: 1000;
+    }
+
+
+
+    /* Popup */
+    .popup {
+        position: absolute;
+        bottom: 90px;
+        right: 10px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 15px 20px;
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        width: 280px;
+        display: none;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .popup::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 30px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+
+    .popup p {
+        margin: 15px 0;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .status-circle {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    .open { background-color: green; }
+    .closed { background-color: red; }
+
+    a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .option-block {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .option-block i {
+        font-size: 20px;
+        margin-top: 4px;
+    }
+
+    small {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        color: #666;
+    }
+</style>
+
+<!-- Bouton + popup -->
+<div style="position: fixed; bottom: 20px; right: 20px;">
+    <button class="floating-button" onclick="togglePopup()">🎯</button>
+
+
+    <div class="popup" id="popupOptions">
+        <div class="option-block">
+            <i>📞</i>
+            <div>
+                <span><span class="status-circle" id="statusCircle"></span><a href="tel:+33617965027">06 17 96 50 27</a></span>
+                <small>Appelez-nous pour toute question ou accompagnement pédagogique.</small>
+            </div>
+        </div>
+
+        <div class="option-block">
+            <i>🎓</i>
+            <div>
+                <a href="donner-un-cours.html">Devenir enseignant</a>
+                <small>Envie de transmettre votre savoir ? Rejoignez notre équipe dynamique et passionnée.</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePopup() {
+        document.querySelector('.floating-button').classList.toggle('open');
+        const popup = document.getElementById('popupOptions');
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function isOpenNow() {
+        const now = new Date();
+        const day = now.getDay(); // 0 = dimanche, 1 = lundi...
+        const hour = now.getHours();
+        const minutes = now.getMinutes();
+        const time = hour + minutes / 60;
+
+        // Ouvert lundi à vendredi 09h-19h, fermé samedi-dimanche
+        const openDays = [1, 2, 3, 4, 5]; // lun à ven
+        return openDays.includes(day) && time >= 9 && time < 19;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const circle = document.getElementById('statusCircle');
+        if (isOpenNow()) {
+            circle.classList.add('open');
+            circle.title = "Nous sommes ouverts";
+        } else {
+            circle.classList.add('closed');
+            circle.title = "Nous sommes fermés";
+        }
+    });
+</script>
 <footer>
-    <p>© 2023 PEPITES FRANCES</p>
-    <p>pepitesfrance@gmail.com</p>
+    <p>© 2023 PÉPITES FRANCE</p>
+    <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>
+    <p>📞 <a href="tel:+33617965027">06 17 96 50 27</a></p>
 </footer>
 </body>
 </html>
