@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://n-baroukh.github.io/pepites/sitemap.xml.txt
+Sitemap: https://n-baroukh.github.io/pepites/sitemap.xml
