@@ -42,20 +42,27 @@
     <link href="css/burger.css" rel="stylesheet">
 
 <!--    <link rel="canonical" href="https://www.pepitesfrances/index"/>-->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="34f110cb-f4a8-4c47-8d93-5b3403fe816a" data-blockingmode="auto" type="text/javascript"></script>
-    <script data-cookieconsent="ignore">    window.dataLayer = window.dataLayer || [];
-    function gtag() {dataLayer.push(arguments);}
-    gtag("consent", "default", {
-        ad_personalization: "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        analytics_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted",
-        wait_for_update: 500,    });
-    gtag("set", "ads_data_redaction", true);
-    gtag("set", "url_passthrough", false);</script>
+    <script>
+        window.axeptioSettings= {
+            clientId:"68c95d52de2a9088f524ca3d",
+            cookiesVersion:"pepitesfrance-fr-EU",
+            googleConsentMode:{
+                default:{
+                    analytics_storage:"denied",
+                    ad_storage:"denied",
+                    ad_user_data:"denied",
+                    ad_personalization:"denied",
+                    wait_for_update:500
+                }
+            }
+        };
+
+        (function(d,s) {
+            var t = d.getElementsByTagName(s)[0],e = d.createElement(s);
+            e.async = true;e.src = "//static.axept.io/sdk.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>
 </head>
 <style>
 
