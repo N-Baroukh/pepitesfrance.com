@@ -126,8 +126,10 @@ nav {
 }
 
 /* Marquee */
+
+
 .banner {
-    background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-dark));
+    background: var(--brand-blue);
     color: white;
     padding: 0.8rem 0;
     overflow: hidden;
@@ -339,7 +341,7 @@ nav {
 
 /* Footer */
 footer {
-    background: var(--text-dark);
+    background: var(--brand-blue);
     color: rgba(255,255,255,0.8);
     text-align: center;
     padding: 4rem 5%;
@@ -778,3 +780,196 @@ footer a:hover { color: var(--brand-yellow); transform: translateY(-2px); }
         font-size: 1.85rem;
     }
 }
+
+
+/* ----- PRO MAX OVERRIDES START ----- */
+:root {
+    --bg-main: #F4F7FB; /* slightly cooler & brighter bg */
+    --brand-blue: #0047AB; /* Restored DA blue */
+}
+
+/* Glassmorphism on Nav */
+nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Page Hero Premium Touch */
+.page-hero {
+    background: radial-gradient(circle at 15% 30%, rgba(10, 58, 130, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 85% 70%, rgba(255, 193, 7, 0.08) 0%, transparent 45%);
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.page-hero h1 {
+    background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.5px;
+    text-shadow: 0px 4px 15px rgba  0, 58    0, 0.1);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+/* Buttons Premium Animation */
+.btn {
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border: none;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: -2;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0px; left: 0;
+    width: 0%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::before { width: 100%; }
+.btn:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+}
+
+/* Card Magic Glass */
+.modern-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5), 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.modern-card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8), 0 20px 50px rgba(10, 58, 130, 0.08); 
+    border-color: rgba(10, 58, 130, 0.1); 
+}
+
+/* Icon Premium */
+.card-icon-wrapper { 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 100%); 
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 8px 20px rgba(0, 0, 0, 0.04); 
+    border-radius: 16px;
+}
+
+
+.floating-button {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+nav .nav-links a.active {
+    position: relative;
+    background: transparent;
+    color: var(--brand-blue);
+    font-weight: 700;
+}
+
+nav .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: var(--brand-yellow);
+    border-radius: 4px;
+}
+
+nav .nav-links li:last-child a {
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s;
+}
+
+nav .nav-links li:last-child a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+/* ----- PRO MAX OVERRIDES END ----- */
+
+/* Input & Form Premium Overrides */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(0, 71, 171, 0.15);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.1), inset 0 2px 5px rgba(0,0,0,0.01);
+    transform: translateY(-2px);
+}
+
+/* Premium Button Colors Overrides */
+.btn-yellow {
+    background: linear-gradient(135deg, var(--brand-yellow) 0%, #FFD54F 100%);
+    color: #4B3800 !important;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);
+    color: white !important;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--brand-blue);
+    color: var(--brand-blue) !important;
+}
+.btn-outline:hover {
+    background: var(--brand-blue);
+    color: white !important;
+}
+
+
