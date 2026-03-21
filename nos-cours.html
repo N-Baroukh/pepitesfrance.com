@@ -41,7 +41,7 @@
         })(document, "script");
     </script>
 </head>
-<body style="background-color: #FDD835;">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5G2L2LS"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -59,96 +59,68 @@
         <li><a href="tel:+33617965027">📞 06 17 96 50 27</a></li>
     </ul>
 </nav>
-<div style="background: #f4f7fb; padding: 40px 20px; border-radius: 20px; max-width: 800px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-    <div style="text-align: center; margin-bottom: 30px;">
-        <img alt="profpepite" src="images/profpepite.webp"
-             style="max-width: 200px; height: auto; border-radius: 50%; margin: 0 auto 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border: 3px solid white;">
-    </div>
-
-    <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 25px;
-              background: linear-gradient(45deg, #007bff, #00b4ff);
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-              animation: gradientShift 3s ease infinite;">
-        On vous trouve des pépites
-    </h1>
-
-    <p style="text-align: center; font-size: 1.1rem; line-height: 1.6; color: #555;
-            max-width: 600px; margin: 0 auto; padding: 20px;
-            background: rgba(255, 255, 255, 0.9); border-radius: 15px;
-            position: relative;">
-        <span style="display: block; margin-bottom: 15px; font-weight: bold; color: #007bff;">Vous cherchez un cours pour votre enfant ?</span>
-        Niveau primaire, collège, lycée ou supérieur<br>
-        En Mathématiques, Physique, Sciences de la vie et de la terre,<br>
-        Français, Anglais, Allemand, Espagnol ou Philosophie ?<br>
-                   <a href="#contact-form" style="display: inline-block; margin-top: 15px; padding: 10px 20px;
-                  background: #007bff; color: white; border-radius: 30px;
-                  font-weight: bold; transform: translateY(5px);
-                  text-decoration: none; cursor: pointer;">
-            Faites-nous part de vos demandes
-        </a>
-        <br>
-        <span style="display: inline-block; margin-top: 20px; font-size: 0.9em; color: #777;">
-            Nous vous rappelons dans les 48h !
-        </span>
-    </p>
+<div class="page-hero animate-fade-up">
+    <h1>L'excellence à votre porte</h1>
+    <p>Besoin d'un accompagnement personnalisé ? Dites-nous ce que vous cherchez, nous vous rappelons sous 48h avec le profil parfait.</p>
 </div>
-<div class="section" id="contact-form" style="background: #f4f7fb; padding: 40px; border-radius: 20px; max-width: 600px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-    <h2 style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 20px;">Quel cours recherchez-vous ?</h2>
 
-    <form action= https://formspree.io/f/xjkrylno method="POST"
-          style="display: flex; flex-direction: column; gap: 20px;">
-        <!-- Email -->
-        <label for="email" style="font-weight: bold; color: #555;">Votre email : <span
-                style="color: red;">*</span></label>
-        <input id="email" name="email" placeholder="exemple@email.com" required
-               style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="email">
+<div class="nos-cours-hero delay-1" style="margin-top: -50px; z-index: 2; position: relative;">
+    <img alt="profpepite" src="images/profpepite.webp">
+    <h1>On vous trouve des pépites</h1>
+    <p>
+        <strong style="color:var(--brand-yellow); font-size:1.2rem;">Vous cherchez un cours pour votre enfant ?</strong><br>
+        De la maternelle au supérieur, dans les matières clés (Mathématiques, Physique, Français, Anglais...).
+    </p>
+    <a href="#contact-form" class="hero-cta-link">Je décris mes besoins</a>
+</div>
 
-        <!-- Coordonnées -->
-        <label for="name" style="font-weight: bold; color: #555;">Nom : <span style="color: red;">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Nom" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+<div class="form-section delay-2" id="contact-form">
+    <h2>Quel cours recherchez-vous ?</h2>
+    
+    <form action="https://formspree.io/f/xjkrylno" method="POST">
+        <div class="form-group">
+            <label for="email">Votre email <span class="required">*</span></label>
+            <input id="email" name="email" type="email" placeholder="exemple@email.com" required>
+        </div>
 
-        <label for="prenom" style="font-weight: bold; color: #555;">Prénom : <span style="color: red;">*</span></label>
-        <input id="prenom" name="prenom" placeholder="Prenom" required type="text" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;" />
+        <div class="form-group">
+            <label for="name">Nom <span class="required">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Entrez votre nom" required>
+        </div>
 
+        <div class="form-group">
+            <label for="prenom">Prénom <span class="required">*</span></label>
+            <input id="prenom" name="prenom" type="text" placeholder="Entrez votre prénom" required>
+        </div>
 
-        <!-- Téléphone et Adresse -->
-        <label for="telephone" style="font-weight: bold; color: #555;">Téléphone : <span
-                style="color: red;">*</span></label>
-        <input id="telephone" name="telephone" placeholder="Téléphone" required type="text" pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres" maxlength="10" inputmode="numeric" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; width: 100%; box-sizing: border-box;" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <div class="form-group">
+            <label for="telephone">Téléphone <span class="required">*</span></label>
+            <input id="telephone" name="telephone" type="text" pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres" maxlength="10" inputmode="numeric" placeholder="Ex: 0612345678" required oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+        </div>
 
-        <label for="adresse" style="font-weight: bold; color: #555;">Adresse : <span
-                style="color: red;">*</span></label>
-        <input id="adresse" name="adresse" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="text">
+        <div class="form-group">
+            <label for="adresse">Adresse complète <span class="required">*</span></label>
+            <input id="adresse" name="adresse" type="text" placeholder="Votre adresse" required>
+        </div>
 
-        <!-- Niveau d'études -->
-        <label for="niveau" style="font-weight: bold; color: #555;">Niveau : <span style="color: red;">*</span></label>
-        <select id="niveau" name="niveau" required
-                style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; background: white;">
-            <option value="---">---</option>
-            <option value="maternelle">Maternelle</option>
-            <option value="primaire">Primaire</option>
-            <option value="college">Collège</option>
-            <option value="lycee">Lycée</option>
-            <option value="superieur">Supérieur</option>
-        </select>
+        <div class="form-group">
+            <label for="niveau">Niveau scolaire <span class="required">*</span></label>
+            <select id="niveau" name="niveau" required>
+                <option value="---">Sélectionnez un niveau</option>
+                <option value="maternelle">Maternelle</option>
+                <option value="primaire">Primaire</option>
+                <option value="college">Collège</option>
+                <option value="lycee">Lycée</option>
+                <option value="superieur">Supérieur</option>
+            </select>
+        </div>
 
-        <!-- Message -->
-        <label for="message" style="font-weight: bold; color: #555;">Message :</label>
-        <textarea id="message" name="message"
-                  placeholder="Décrivez vos besoins..."
-                  style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; height: 100px;"></textarea>
+        <div class="form-group">
+            <label for="message">Votre demande (Matières, horaires...)</label>
+            <textarea id="message" name="message" placeholder="Décrivez vos besoins éducatifs..."></textarea>
+        </div>
 
-        <!-- Bouton -->
-        <button style="background: #007bff; color: #fff; padding: 15px; border: none; border-radius: 10px;
-                       font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease;
-                       margin-top: 10px;"
-                type="submit">
-            Envoyer
-        </button>
+        <button type="submit" class="btn btn-yellow submit-btn">Envoyer ma demande</button>
     </form>
 </div>
 <!-- Bouton + popup -->
@@ -178,9 +150,11 @@
 <script src="js/burger.js" defer></script>
 <script src="js/popup.js" defer></script>
 <footer>
-    <p>© 2023 PÉPITES FRANCE</p>
-    <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>
-    <p>📞 <a href="tel:+33617965027">06 17 96 50 27</a></p>
+    <div class="footer-content">
+        <p>© 2023 PÉPITES FRANCE</p>
+        <p><a href="mailto:pepitesfrance@gmail.com">📧 pepitesfrance@gmail.com</a></p>
+        <p><a href="tel:+33617965027">📞 06 17 96 50 27</a></p>
+    </div>
 </footer>
 </body>
 </html>

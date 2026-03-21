@@ -48,103 +48,71 @@
     </ul>
 
 </nav>
-<div style="background: #f4f7fb; padding: 40px; border-radius: 20px; max-width: 600px; margin: 50px auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-    <h2 style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 20px;">Devenir Professeur chez Pépites
-        France</h2>
-    <form action="https://getform.io/f/aejleqkb" enctype="multipart/form-data" method="POST"
-          style="display: flex; flex-direction: column; gap: 20px;">
-        <label for="name" style="font-weight: bold; color: #555;">Nom : <span style="color: red;">*</span></label>
-        <input id="name" name="name" placeholder="Nom" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="text"/>
-
-        <label for="prenom" style="font-weight: bold; color: #555;">Prénom : <span style="color: red;">*</span></label>
-        <input id="prenom" name="prenom" placeholder="Prenom" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="text"/>
-
-        <label for="email" style="font-weight: bold; color: #555;">Votre email : <span
-                style="color: red;">*</span></label>
-        <input id="email" name="email" placeholder="Email" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="email"/>
-
-        <label for="telephone" style="font-weight: bold; color: #555; display: block; margin-bottom: 5px;">Téléphone :
-            <span style="color: red;">*</span></label>
-        <input id="telephone" inputmode="numeric" maxlength="10" name="telephone" oninput="this.value=this.value.replace(/[^0-9]/g,'');" pattern="[0-9]{10}"
-               placeholder="Téléphone" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; width: 100%; box-sizing: border-box;"
-               title="Entrez un numéro de téléphone à 10 chiffres"
-               type="text"/>
-
-
-        <label for="adresse" style="font-weight: bold; color: #555;">Adresse : <span
-                style="color: red;">*</span></label>
-        <input id="adresse" name="adresse" placeholder="Adresse" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem;"
-               type="text"/>
-
-        <label for="message" style="font-weight: bold; color: #555;">Message :</label>
-        <textarea id="message" name="message" placeholder="Message"
-                  style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; height: 100px;"></textarea>
-
-        <div style="margin-bottom: 30px;">
-            <label for="file"
-                   style="display: block; margin-bottom: 8px; font-weight: 600; color: #2d3748; font-size: 0.9rem;">
-                Joindre un fichier
-                <span style="font-weight: 400; color: #718096;">(PDF, JPG, PNG - max 5Mo)</span>
-            </label>
-
-            <div style="position: relative;">
-                <label for="file" style="
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 18px 24px;
-            background: linear-gradient(145deg, #f7fafc, #edf2f7);
-            border: 2px dashed #cbd5e0;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            hover:bg-red-500
-        ">
-                    <svg fill="none" stroke="currentColor" style="width: 24px; height: 24px; color: #4299e1;"
-                         viewBox="0 0 24 24">
-                        <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-width="2"/>
-                    </svg>
-                    <span style="font-weight: 500; color: #2d3748;">Choisir un fichier</span>
-                    <input
-                            type="file"
-                            id="file"
-                            name="file"
-                            style="
-                    opacity: 0;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    cursor: pointer;
-                "
-                            onchange="document.getElementById('file-name').textContent = this.files[0].name"
-                    >
-                </label>
-            </div>
-
-            <div id="file-name" style="
-        margin-top: 8px;
-        font-size: 0.875rem;
-        color: #4a5568;
-        font-style: italic;
-    "></div>
-        </div>
-
-        <input type="hidden" name="_gotcha" style="display:none !important">
-
-        <button style="background: #007bff; color: #fff; padding: 15px; border: none; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;"
-                type="submit">
-            Envoyer
-        </button>
-    </form>
+<div class="page-hero animate-fade-up">
+    <h1>Rejoignez l'élite des profs</h1>
+    <p>Vous êtes pédagogue, passionnés, et vous souhaitez aider la nouvelle génération à briller ?</p>
 </div>
 
+<div class="donner-cours-hero animate-fade-up delay-1" style="margin-top: -50px; z-index: 2; position: relative;">
+    <div class="teacher-perks">
+        <h2>Devenez une Pépite 💪🎓</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;">🕒 Horaires flexibles (selon vas dispos)</li>
+            <li style="margin-bottom: 10px;">🧑‍🏫 Des élèves motivés près de chez vous</li>
+            <li style="margin-bottom: 10px;">💸 Une rémunération attractive à la hauteur de votre engagement</li>
+        </ul>
+        <a href="#become-teacher" class="hero-cta-link btn-blue">Postuler en 2 min</a>
+    </div>
+</div>
 
+<div class="form-section delay-2" id="become-teacher">
+    <h2>Soumettre sa candidature</h2>
+    
+    <form action="https://formspree.io/f/mqkenbyy" method="POST">
+        <div class="form-group">
+            <label for="email">Votre email <span class="required">*</span></label>
+            <input id="email" name="email" type="email" placeholder="votre@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Nom / Prénom <span class="required">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Entrez votre nom et prénom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Téléphone <span class="required">*</span></label>
+            <input id="telephone" name="telephone" type="text" pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres" maxlength="10" inputmode="numeric" placeholder="Ex: 0612345678" required oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+        </div>
+
+        <div class="form-group">
+            <label for="ville">Ville ou CP <span class="required">*</span></label>
+            <input id="ville" name="ville" type="text" placeholder="Où donnez-vous cours ?" required>
+        </div>
+
+        <div class="form-group">
+            <label for="niveau">Niveau d'étude actuel <span class="required">*</span></label>
+            <select id="niveau" name="niveau" required>
+                <option value="---">Votre niveau actuel</option>
+                <option value="licence">Prépa/Licence</option>
+                <option value="master">Master / Grande École</option>
+                <option value="enseignant">Enseignant titulaire</option>
+                <option value="autre">Autre (précisez dans le message)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Matières et dispos</label>
+            <textarea id="message" name="message" placeholder="Maths, Physique, Français ? Quels jours de la semaine ?"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="cv">Lien vers votre CV / LinkedIn</label>
+            <input id="cv" name="cv" type="url" placeholder="https://linkedin.com/in/votreprofil">
+        </div>
+
+        <button type="submit" class="btn btn-yellow submit-btn">Envoyer ma candidature</button>
+    </form>
+</div>
 <!-- Bouton + popup -->
 <div style="position: fixed; bottom: 20px; right: 20px;">
     <button class="floating-button" onclick="togglePopup()">🎯</button>
@@ -172,9 +140,11 @@
 <script src="js/burger.js" defer></script>
 <script src="js/popup.js" defer></script>
 <footer>
-    <p>© 2023 PÉPITES FRANCE</p>
-    <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>
-    <p>📞 <a href="tel:+33617965027">06 17 96 50 27</a></p>
+    <div class="footer-content">
+        <p>© 2023 PÉPITES FRANCE</p>
+        <p><a href="mailto:pepitesfrance@gmail.com">📧 pepitesfrance@gmail.com</a></p>
+        <p><a href="tel:+33617965027">📞 06 17 96 50 27</a></p>
+    </div>
 </footer>
 </body>
 </html>

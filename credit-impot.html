@@ -48,71 +48,60 @@
         <li><a href="tel:+33617965027">📞 06 17 96 50 27</a></li>
     </ul>
 </nav>
-<div class="promo-container">
+<div class="page-hero animate-fade-up">
+    <h1>Allégez le coût de la réussite</h1>
+    <p>Bénéficiez instantanément d'une déduction de 50% sur tous nos cours particuliers grâce aux aides de l'État.</p>
+</div>
+
+<div class="promo-container animate-fade-up delay-1" style="margin-top: -50px; z-index: 2; position: relative;">
     <div class="promo-card">
-        <h3 class="gradient-header">🎓 PAYEZ UNIQUEMENT 50% DE VOS COURS PARTICULIERS !</h3>
-        <div class="ribbon"></div>
-        <p class="highlight-box">Pépites France vous permet de bénéficier immédiatement de <span class="highlight">50% de crédit d’impôt</span>
-            sur vos cours particuliers à domicile grâce à l'Urssaf et la Direction générale des Finances publiques.</p>
+        <h3 class="gradient-header">Ne payez que la moitié !</h3>
+        <p class="highlight-box">Avec Pépites France, profitez de <strong style="color:var(--brand-blue);">50% de crédit d’impôt</strong> (immédiat ou différé) sur l'ensemble de vos heures de cours à domicile.</p>
     </div>
 
-    <div class="process-card">
-        <h3 class="process-title">💡 COMMENT ÇA MARCHE ?</h3>
+    <div class="process-card delay-2">
+        <h3 class="process-title">Comment ça marche ?</h3>
 
         <div class="options-container">
-            <div class="option option1">
-                <h4>🔄 Option 1 : Sans avance</h4>
-                <p>Payez 100% maintenant → Remboursement 50% l'année suivante</p>
+            <div class="option">
+                <h4>Option 1 : Sans avance</h4>
+                <p>Payez 100% maintenant, et l'État vous rembourse 50% l'année suivante.</p>
                 <div class="timeline">
                     <div class="step">
-                        <div class="step-icon">①</div>
-                        <p class="step-text">Réglez vos cours comme d’habitude</p>
+                        <div class="step-icon">1</div>
+                        <p class="step-text">Réglez vos cours</p>
                     </div>
                     <div class="step">
-                        <div class="step-icon">②</div>
-                        <p class="step-text">Déclarez vos dépenses aux impôts</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">③</div>
-                        <p class="step-text">Recevez 50% en crédit d’impôt l’année suivante</p>
+                        <div class="step-icon">2</div>
+                        <p class="step-text">Déclarez aux impôts</p>
                     </div>
                 </div>
             </div>
 
-            <div class="option option2">
-                <h4>⚡ Option 2 : Avec avance</h4>
-                <p>Payez seulement 50% immédiatement</p>
+            <div class="option">
+                <h4>Option 2 : Avec avance (Immédiat)</h4>
+                <p>Ne payez que 50% immédiatement via l'Urssaf, nous gérons le reste.</p>
                 <div class="timeline">
                     <div class="step">
-                        <div class="step-icon">①</div>
-                        <p class="step-text">Prévenez votre conseiller Pépites France</p>
+                        <div class="step-icon">1</div>
+                        <p class="step-text">Validez avec votre conseiller</p>
                     </div>
                     <div class="step">
-                        <div class="step-icon">②</div>
-                        <p class="step-text">Activation du lien Urssaf par email</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">③</div>
-                        <p class="step-text">Réception des emails de confirmation</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">④</div>
-                        <p class="step-text">Règlement du solde simplifié</p>
+                        <div class="step-icon">2</div>
+                        <p class="step-text">Activez l'invitation Urssaf</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="cta-box">
-            <p>📩 Suivez le guide ! Contactez-nous pour activer votre réduction :</p>
+            <p style="font-size: 1.1rem; font-weight: 500;">Prêt à mettre en place le crédit d'impôt ?</p>
             <a target="_blank" href="https://www.impots.gouv.fr/portail/particulier/emploi-domicile" class="info-link" rel="noopener noreferrer">
-                Lien vers les impôts
-                ℹ️ Consultez les plafonds de crédit d'impôt
+                Consulter les plafonds sur Impots.gouv
             </a>
         </div>
     </div>
 </div>
-
 <!-- Bouton + popup -->
 <div style="position: fixed; bottom: 20px; right: 20px;">
     <button class="floating-button" onclick="togglePopup()">🎯</button>
@@ -140,9 +129,11 @@
 <script src="js/burger.js" defer></script>
 <script src="js/popup.js" defer></script>
 <footer>
-    <p>© 2023 PÉPITES FRANCE</p>
-    <p>📧 <a href="mailto:pepitesfrance@gmail.com">pepitesfrance@gmail.com</a></p>
-    <p>📞 <a href="tel:+33617965027">06 17 96 50 27</a></p>
+    <div class="footer-content">
+        <p>© 2023 PÉPITES FRANCE</p>
+        <p><a href="mailto:pepitesfrance@gmail.com">📧 pepitesfrance@gmail.com</a></p>
+        <p><a href="tel:+33617965027">📞 06 17 96 50 27</a></p>
+    </div>
 </footer>
 </body>
 </html>
