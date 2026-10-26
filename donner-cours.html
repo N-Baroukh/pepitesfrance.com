@@ -113,7 +113,8 @@
         <div class="form-card" data-reveal data-reveal-delay="1" id="candidature">
           <h2>Soumettre ma candidature</h2>
           <p class="text-center muted" style="margin-top:-1rem;margin-bottom:2rem">Réponse rapide · Champs marqués <span class="req">*</span> obligatoires</p>
-          <form action="https://formspree.io/f/mqkenbyy" method="POST">
+          <form action="https://gduhfhdpquekxtklqoqo.supabase.co/functions/v1/formulaire-site" method="POST" accept-charset="UTF-8" data-formulaire="candidature">
+            <input type="hidden" name="type" value="candidature">
             <div class="form-grid">
               <div class="form-group full">
                 <label for="email">Votre email <span class="req">*</span></label>
@@ -150,11 +151,13 @@
                 <input id="cv" name="cv" type="url" autocomplete="url" placeholder="https://linkedin.com/in/votreprofil">
               </div>
             </div>
+            <div class="hp" aria-hidden="true"><label>Ne pas remplir<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="form-consent">
               <label><input type="checkbox" name="consent" required><span>J'accepte les <a href="confidentialite.html">conditions</a> et que mes données soient utilisées pour traiter ma candidature.</span></label>
             </div>
             <button type="submit" class="btn btn-gold btn-block btn-lg" style="margin-top:1.2rem">Envoyer ma candidature</button>
             <p class="form-note">En envoyant ce formulaire, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+          <noscript><p class="form-note">Sans JavaScript, l’envoi peut ne pas s’afficher correctement : vous pouvez aussi nous appeler au <a href="tel:+33617965027">06 17 96 50 27</a>.</p></noscript>
           </form>
         </div>
       </div>
@@ -183,5 +186,6 @@
   </div>
 </footer>
 <script src="js/main.js" defer></script>
+<script src="js/formulaires.js" defer></script>
 </body>
 </html>

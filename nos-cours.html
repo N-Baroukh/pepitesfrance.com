@@ -102,7 +102,8 @@
         <div class="form-card" data-reveal data-reveal-delay="1" id="contact-form">
           <h2>Quel cours recherchez-vous ?</h2>
           <p class="text-center muted" style="margin-top:-1rem;margin-bottom:2rem">Réponse sous 24h à 48h · Champs marqués <span class="req">*</span> obligatoires</p>
-          <form action="https://formspree.io/f/xjkrylno" method="POST">
+          <form action="https://gduhfhdpquekxtklqoqo.supabase.co/functions/v1/formulaire-site" method="POST" accept-charset="UTF-8" data-formulaire="demande">
+            <input type="hidden" name="type" value="demande">
             <div class="form-grid">
               <div class="form-group full">
                 <label for="email">Votre email <span class="req">*</span></label>
@@ -140,11 +141,13 @@
                 <textarea id="message" name="message" placeholder="Ex : Mathématiques en classe de 3e, 1 à 2 fois par semaine en fin de journée."></textarea>
               </div>
             </div>
+            <div class="hp" aria-hidden="true"><label>Ne pas remplir<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="form-consent">
               <label><input type="checkbox" name="consent" required><span>J'accepte les <a href="confidentialite.html">conditions</a> et que mes données soient utilisées pour traiter ma demande.</span></label>
             </div>
             <button type="submit" class="btn btn-gold btn-block btn-lg" style="margin-top:1.2rem">Envoyer ma demande</button>
             <p class="form-note">En envoyant ce formulaire, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>. Vos données ne sont utilisées que pour traiter votre demande.</p>
+          <noscript><p class="form-note">Sans JavaScript, l’envoi peut ne pas s’afficher correctement : vous pouvez aussi nous appeler au <a href="tel:+33617965027">06 17 96 50 27</a>.</p></noscript>
           </form>
         </div>
       </div>
@@ -173,5 +176,6 @@
   </div>
 </footer>
 <script src="js/main.js" defer></script>
+<script src="js/formulaires.js" defer></script>
 </body>
 </html>

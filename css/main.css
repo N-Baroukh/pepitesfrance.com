@@ -773,6 +773,30 @@ select {
 .form-note { font-size: .85rem; color: var(--ink-500); text-align: center; margin-top: 1rem; }
 .form-note a { text-decoration: underline; }
 
+/* Retour du formulaire : erreurs, message d'échec, confirmation d'envoi */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-group input[aria-invalid="true"], .form-group select[aria-invalid="true"], .form-group textarea[aria-invalid="true"] {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 4px rgba(224, 65, 60, .12);
+}
+.field-error { margin: 0; font-size: .85rem; font-weight: 600; color: var(--danger); }
+.form-consent .field-error { margin-top: .4rem; }
+.form-alert {
+  margin-top: 1.2rem; padding: .9rem 1.1rem;
+  background: #fdeceb; border: 1.5px solid #f3c5c2; border-radius: var(--r-sm);
+  color: #8a1c16; font-weight: 600; font-size: .92rem;
+}
+.form-alert a { color: inherit; text-decoration: underline; }
+.form-card button[type="submit"][disabled] { opacity: .7; cursor: progress; }
+.form-success { text-align: center; padding: clamp(.5rem, 3vw, 1.5rem) 0; outline: none; }
+.form-success__icon {
+  width: 64px; height: 64px; margin: 0 auto 1.1rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--success); color: #fff; font-size: 2rem; font-weight: 700;
+}
+.form-success p { max-width: 46ch; margin-inline: auto; }
+.form-success a { text-decoration: underline; }
+
 /* Consentement RGPD */
 .form-consent { margin-top: 1.2rem; }
 .form-consent label {
